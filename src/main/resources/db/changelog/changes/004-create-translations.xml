@@ -7,13 +7,13 @@
 
     <changeSet id="004" author="ilyas">
         <createTable tableName="translations">
-            <column name="id" type="serial">
+            <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="key_id" type="int">
+            <column name="key_id" type="bigint">
                 <constraints nullable="false" foreignKeyName="fk_translations_key" references="translation_keys(id)"/>
             </column>
-            <column name="locale_id" type="int">
+            <column name="locale_id" type="bigint">
                 <constraints nullable="false" foreignKeyName="fk_translations_locale" references="locales(id)"/>
             </column>
             <column name="content" type="text">

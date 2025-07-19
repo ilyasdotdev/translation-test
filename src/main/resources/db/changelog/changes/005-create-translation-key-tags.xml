@@ -7,13 +7,13 @@
 
     <changeSet id="005" author="ilyas">
         <createTable tableName="translation_key_tags">
-            <column name="id" type="serial">
+            <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="key_id" type="int">
+            <column name="key_id" type="bigint">
                 <constraints nullable="false" foreignKeyName="fk_translation_key_tags_key" references="translation_keys(id)"/>
             </column>
-            <column name="tag_id" type="int">
+            <column name="tag_id" type="bigint">
                 <constraints nullable="false" foreignKeyName="fk_translation_key_tags_tag" references="tags(id)"/>
             </column>
         </createTable>

@@ -47,6 +47,10 @@ public class SecurityConfig {
                 .authorizeHttpRequests(customizer ->
                         customizer
                                 .requestMatchers("/api/auth").permitAll()
+                                .requestMatchers("/api/locales/**").permitAll()
+                                .requestMatchers("/api/tags/**").permitAll()
+                                .requestMatchers("/api/translation-keys/**").permitAll()
+                                .requestMatchers("/api/translations/**").permitAll()
                                 .requestMatchers("/api/**").authenticated()
                                 .anyRequest().permitAll()
                 )
