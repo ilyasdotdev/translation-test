@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: transaction-service
+
+  liquibase:
+    enabled: true
+    drop-first: false
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
+rsa:
+  private-key: classpath:certs/private.pem
+  public-key: classpath:certs/public.pem
+
+##JWT
+jwt:
+  expiryUnit: DAYS # MINUTES, SECONDS, HOURS, DAYS
+  expiry: 1

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="005" author="ilyas">
+        <createTable tableName="translation_key_tags">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="key_id" type="int">
+                <constraints nullable="false" foreignKeyName="fk_translation_key_tags_key" references="translation_keys(id)"/>
+            </column>
+            <column name="tag_id" type="int">
+                <constraints nullable="false" foreignKeyName="fk_translation_key_tags_tag" references="tags(id)"/>
+            </column>
+        </createTable>
+
+        <addUniqueConstraint
+            tableName="translation_key_tags"
+            columnNames="key_id,tag_id"
+            constraintName="uk_translation_key_tags"/>
+    </changeSet>
+
+</databaseChangeLog>

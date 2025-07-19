@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="004" author="ilyas">
+        <createTable tableName="translations">
+            <column name="id" type="serial">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="key_id" type="int">
+                <constraints nullable="false" foreignKeyName="fk_translations_key" references="translation_keys(id)"/>
+            </column>
+            <column name="locale_id" type="int">
+                <constraints nullable="false" foreignKeyName="fk_translations_locale" references="locales(id)"/>
+            </column>
+            <column name="content" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_at" type="timestamp" defaultValueComputed="CURRENT_TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addUniqueConstraint
+            tableName="translations"
+            columnNames="key_id,locale_id"
+            constraintName="uk_translations_key_locale"/>
+    </changeSet>
+
+</databaseChangeLog>
