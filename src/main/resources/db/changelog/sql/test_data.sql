@@ -1910,9 +1910,7 @@ INSERT INTO translation_keys (`key`, description) VALUES ('app.message_read', 'R
 INSERT INTO translation_keys (`key`, description) VALUES ('app.item_update', 'Update item');
 INSERT INTO translation_keys (`key`, description) VALUES ('status.notification_validate', 'Validate notification');
 INSERT INTO translation_keys (`key`, description) VALUES ('status.invoice_send', 'Send invoice');
-INSERT INTO translation_keys (`key`, description) VALUES ('component.notification_create', 'Create notification');
 INSERT INTO translation_keys (`key`, description) VALUES ('action.message_send', 'Send message');
-INSERT INTO translation_keys (`key`, description) VALUES ('component.invoice_delete', 'Delete invoice');
 INSERT INTO translation_keys (`key`, description) VALUES ('component.item_export', 'Export item');
 INSERT INTO translation_keys (`key`, description) VALUES ('component.item_import', 'Import item');
 INSERT INTO translation_keys (`key`, description) VALUES ('page.document_receive', 'Receive document');
@@ -2495,26 +2493,6 @@ INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES
  'Send invoice (DE)', 
  NOW());
 INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES 
-((SELECT id FROM translation_keys WHERE `key` = 'component.notification_create'), 
- (SELECT id FROM locales WHERE code = 'en'), 
- 'Create notification', 
- NOW());
-INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES 
-((SELECT id FROM translation_keys WHERE `key` = 'component.notification_create'), 
- (SELECT id FROM locales WHERE code = 'es'), 
- 'Create notification (ES)', 
- NOW());
-INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES 
-((SELECT id FROM translation_keys WHERE `key` = 'component.notification_create'), 
- (SELECT id FROM locales WHERE code = 'fr'), 
- 'Create notification (FR)', 
- NOW());
-INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES 
-((SELECT id FROM translation_keys WHERE `key` = 'component.notification_create'), 
- (SELECT id FROM locales WHERE code = 'de'), 
- 'Create notification (DE)', 
- NOW());
-INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'action.message_send'), 
  (SELECT id FROM locales WHERE code = 'en'), 
  'Send message', 
@@ -2533,26 +2511,6 @@ INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES
 ((SELECT id FROM translation_keys WHERE `key` = 'action.message_send'), 
  (SELECT id FROM locales WHERE code = 'de'), 
  'Send message (DE)', 
- NOW());
-INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES 
-((SELECT id FROM translation_keys WHERE `key` = 'component.invoice_delete'), 
- (SELECT id FROM locales WHERE code = 'en'), 
- 'Delete invoice', 
- NOW());
-INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES 
-((SELECT id FROM translation_keys WHERE `key` = 'component.invoice_delete'), 
- (SELECT id FROM locales WHERE code = 'es'), 
- 'Delete invoice (ES)', 
- NOW());
-INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES 
-((SELECT id FROM translation_keys WHERE `key` = 'component.invoice_delete'), 
- (SELECT id FROM locales WHERE code = 'fr'), 
- 'Delete invoice (FR)', 
- NOW());
-INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES 
-((SELECT id FROM translation_keys WHERE `key` = 'component.invoice_delete'), 
- (SELECT id FROM locales WHERE code = 'de'), 
- 'Delete invoice (DE)', 
  NOW());
 INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'component.item_export'), 
@@ -2936,361 +2894,361 @@ INSERT INTO translations (key_id, locale_id, content, updated_at) VALUES
  NOW());
 
 -- Insert translation key tags
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.save'), 
  (SELECT id FROM tags WHERE name = 'ui'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.save'), 
  (SELECT id FROM tags WHERE name = 'button'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.cancel'), 
  (SELECT id FROM tags WHERE name = 'ui'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.cancel'), 
  (SELECT id FROM tags WHERE name = 'button'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.submit'), 
  (SELECT id FROM tags WHERE name = 'ui'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.submit'), 
  (SELECT id FROM tags WHERE name = 'button'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.edit'), 
  (SELECT id FROM tags WHERE name = 'ui'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.edit'), 
  (SELECT id FROM tags WHERE name = 'button'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.delete'), 
  (SELECT id FROM tags WHERE name = 'ui'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.delete'), 
  (SELECT id FROM tags WHERE name = 'button'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.add'), 
  (SELECT id FROM tags WHERE name = 'ui'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.add'), 
  (SELECT id FROM tags WHERE name = 'button'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.search'), 
  (SELECT id FROM tags WHERE name = 'ui'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.search'), 
  (SELECT id FROM tags WHERE name = 'button'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.filter'), 
  (SELECT id FROM tags WHERE name = 'ui'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.filter'), 
  (SELECT id FROM tags WHERE name = 'button'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.reset'), 
  (SELECT id FROM tags WHERE name = 'ui'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.reset'), 
  (SELECT id FROM tags WHERE name = 'button'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.confirm'), 
  (SELECT id FROM tags WHERE name = 'ui'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'button.confirm'), 
  (SELECT id FROM tags WHERE name = 'button'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.home'), 
  (SELECT id FROM tags WHERE name = 'menu'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.home'), 
  (SELECT id FROM tags WHERE name = 'navigation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.about'), 
  (SELECT id FROM tags WHERE name = 'menu'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.about'), 
  (SELECT id FROM tags WHERE name = 'navigation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.contact'), 
  (SELECT id FROM tags WHERE name = 'menu'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.contact'), 
  (SELECT id FROM tags WHERE name = 'navigation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.products'), 
  (SELECT id FROM tags WHERE name = 'menu'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.products'), 
  (SELECT id FROM tags WHERE name = 'navigation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.services'), 
  (SELECT id FROM tags WHERE name = 'menu'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.services'), 
  (SELECT id FROM tags WHERE name = 'navigation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.profile'), 
  (SELECT id FROM tags WHERE name = 'menu'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.profile'), 
  (SELECT id FROM tags WHERE name = 'navigation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.settings'), 
  (SELECT id FROM tags WHERE name = 'menu'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.settings'), 
  (SELECT id FROM tags WHERE name = 'navigation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.logout'), 
  (SELECT id FROM tags WHERE name = 'menu'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.logout'), 
  (SELECT id FROM tags WHERE name = 'navigation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.help'), 
  (SELECT id FROM tags WHERE name = 'menu'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.help'), 
  (SELECT id FROM tags WHERE name = 'navigation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.dashboard'), 
  (SELECT id FROM tags WHERE name = 'menu'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'menu.dashboard'), 
  (SELECT id FROM tags WHERE name = 'navigation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'form.name'), 
  (SELECT id FROM tags WHERE name = 'form'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'form.email'), 
  (SELECT id FROM tags WHERE name = 'form'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'form.password'), 
  (SELECT id FROM tags WHERE name = 'form'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'form.confirm_password'), 
  (SELECT id FROM tags WHERE name = 'form'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'form.phone'), 
  (SELECT id FROM tags WHERE name = 'form'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'form.address'), 
  (SELECT id FROM tags WHERE name = 'form'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'form.city'), 
  (SELECT id FROM tags WHERE name = 'form'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'form.country'), 
  (SELECT id FROM tags WHERE name = 'form'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'form.company'), 
  (SELECT id FROM tags WHERE name = 'form'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'form.description'), 
  (SELECT id FROM tags WHERE name = 'form'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.required'), 
  (SELECT id FROM tags WHERE name = 'validation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.required'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.email_invalid'), 
  (SELECT id FROM tags WHERE name = 'validation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.email_invalid'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.password_weak'), 
  (SELECT id FROM tags WHERE name = 'validation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.password_weak'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.passwords_mismatch'), 
  (SELECT id FROM tags WHERE name = 'validation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.passwords_mismatch'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.phone_invalid'), 
  (SELECT id FROM tags WHERE name = 'validation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.phone_invalid'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.max_length'), 
  (SELECT id FROM tags WHERE name = 'validation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.max_length'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.min_length'), 
  (SELECT id FROM tags WHERE name = 'validation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.min_length'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.numeric_only'), 
  (SELECT id FROM tags WHERE name = 'validation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.numeric_only'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.alpha_only'), 
  (SELECT id FROM tags WHERE name = 'validation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.alpha_only'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.date_invalid'), 
  (SELECT id FROM tags WHERE name = 'validation'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'validation.date_invalid'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'success.saved'), 
  (SELECT id FROM tags WHERE name = 'success'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'success.deleted'), 
  (SELECT id FROM tags WHERE name = 'success'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'success.created'), 
  (SELECT id FROM tags WHERE name = 'success'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'success.updated'), 
  (SELECT id FROM tags WHERE name = 'success'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'success.sent'), 
  (SELECT id FROM tags WHERE name = 'success'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'success.uploaded'), 
  (SELECT id FROM tags WHERE name = 'success'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'success.downloaded'), 
  (SELECT id FROM tags WHERE name = 'success'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'success.registered'), 
  (SELECT id FROM tags WHERE name = 'success'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'success.logged_in'), 
  (SELECT id FROM tags WHERE name = 'success'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'success.password_changed'), 
  (SELECT id FROM tags WHERE name = 'success'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'error.generic'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'error.network'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'error.server'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'error.unauthorized'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'error.forbidden'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'error.not_found'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'error.timeout'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'error.invalid_data'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'error.file_too_large'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'error.unsupported_format'), 
  (SELECT id FROM tags WHERE name = 'error'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'modal.confirm_delete'), 
  (SELECT id FROM tags WHERE name = 'modal'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'modal.confirm_action'), 
  (SELECT id FROM tags WHERE name = 'modal'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'modal.unsaved_changes'), 
  (SELECT id FROM tags WHERE name = 'modal'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'modal.file_upload'), 
  (SELECT id FROM tags WHERE name = 'modal'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'modal.change_password'), 
  (SELECT id FROM tags WHERE name = 'modal'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'modal.user_profile'), 
  (SELECT id FROM tags WHERE name = 'modal'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'modal.settings'), 
  (SELECT id FROM tags WHERE name = 'modal'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'modal.about'), 
  (SELECT id FROM tags WHERE name = 'modal'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'modal.terms'), 
  (SELECT id FROM tags WHERE name = 'modal'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'modal.privacy'), 
  (SELECT id FROM tags WHERE name = 'modal'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'header.welcome'), 
  (SELECT id FROM tags WHERE name = 'header'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'header.login'), 
  (SELECT id FROM tags WHERE name = 'header'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'header.register'), 
  (SELECT id FROM tags WHERE name = 'header'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'footer.copyright'), 
  (SELECT id FROM tags WHERE name = 'footer'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'footer.privacy'), 
  (SELECT id FROM tags WHERE name = 'footer'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'footer.terms'), 
  (SELECT id FROM tags WHERE name = 'footer'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'footer.contact'), 
  (SELECT id FROM tags WHERE name = 'footer'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'footer.support'), 
  (SELECT id FROM tags WHERE name = 'footer'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.login'), 
  (SELECT id FROM tags WHERE name = 'auth'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.logout'), 
  (SELECT id FROM tags WHERE name = 'auth'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.register'), 
  (SELECT id FROM tags WHERE name = 'auth'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.forgot_password'), 
  (SELECT id FROM tags WHERE name = 'auth'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.reset_password'), 
  (SELECT id FROM tags WHERE name = 'auth'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.change_password'), 
  (SELECT id FROM tags WHERE name = 'auth'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.username'), 
  (SELECT id FROM tags WHERE name = 'auth'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.password'), 
  (SELECT id FROM tags WHERE name = 'auth'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.remember_me'), 
  (SELECT id FROM tags WHERE name = 'auth'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.login_failed'), 
  (SELECT id FROM tags WHERE name = 'auth'));
-INSERT INTO translation_key_tags (translation_key_id, tag_id) VALUES 
+INSERT INTO translation_key_tags (key_id, tag_id) VALUES 
 ((SELECT id FROM translation_keys WHERE `key` = 'auth.login_failed'), 
  (SELECT id FROM tags WHERE name = 'error'));
 
