@@ -22,4 +22,12 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="006-insert-api-test-user" author="m.ilyas">
+        <insert tableName="users">
+            <column name="name" value="apitest"/>
+            <column name="password" value="$2a$10$kzY.ASw8B5zRXa/V/fZGQ.QV.dh7Qx2VjKfY2mZX4F3zXJFvQh9Uy"/>
+            <column name="created_at" valueComputed="NOW()"/>
+        </insert>
+    </changeSet>
+
 </databaseChangeLog>
