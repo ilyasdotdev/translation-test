@@ -175,4 +175,60 @@ public class TranslationService {
             translationRepository.delete(translation.get());
         }
     }
+
+    /**
+     * Search translations by content
+     */
+    @Transactional(readOnly = true)
+    public List<Translation> searchByContent(String content) {
+        return translationRepository.findByContentContainingIgnoreCase(content);
+    }
+
+    /**
+     * Search translations by key
+     */
+    @Transactional(readOnly = true)
+    public List<Translation> searchByKey(String key) {
+        return translationRepository.findByTranslationKeyKeyContaining(key);
+    }
+
+    /**
+     * Search translations by tag names
+     */
+    @Transactional(readOnly = true)
+    public List<Translation> searchByTags(List<String> tagNames) {
+        return translationRepository.findByTagNames(tagNames);
+    }
+
+    /**
+     * Get all translations
+     */
+    @Transactional(readOnly = true)
+    public List<Translation> getAllTranslations() {
+        return translationRepository.findAll();
+    }
+
+    /**
+     * Get all locales
+     */
+    @Transactional(readOnly = true)
+    public List<Locale> getAllLocales() {
+        return localeRepository.findAll();
+    }
+
+    /**
+     * Get all tags
+     */
+    @Transactional(readOnly = true)
+    public List<Tag> getAllTags() {
+        return tagRepository.findAll();
+    }
+
+    /**
+     * Get all translation keys
+     */
+    @Transactional(readOnly = true)
+    public List<TranslationKey> getAllTranslationKeys() {
+        return translationKeyRepository.findAll();
+    }
 }
