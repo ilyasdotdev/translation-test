@@ -11,5 +11,6 @@
     <include file="db/changelog/changes/004-create-translations.xml"/>
     <include file="db/changelog/changes/005-create-translation-key-tags.xml"/>
     <include file="db/changelog/changes/006-create-users.xml"/>
+    <include file="db/changelog/changes/007-insert-test-data.xml"/>
 
 </databaseChangeLog>
